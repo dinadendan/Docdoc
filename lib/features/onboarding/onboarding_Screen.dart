@@ -22,7 +22,7 @@ class OnBoardingScreen extends StatelessWidget {
                   SizedBox(height: 30.h),
                   const DoctorImageAndText(),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30.w),
+                    padding: EdgeInsets.symmetric(horizontal: 25.w),
                     child: Column(
                       children: [
                         Text(

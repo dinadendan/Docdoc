@@ -1,7 +1,7 @@
 import 'package:docdoc_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/login/ui/screens/login_screen.dart';
+import '../../features/login/ui/login_screen.dart';
 import '../../features/onboarding/onboarding_Screen.dart';
 
 
