@@ -1,9 +1,9 @@
-import 'package:docdoc_app/features/onboarding/widgets/doc_logo_and_name.dart';
-import 'package:docdoc_app/features/onboarding/widgets/doctor_image_and_text.dart';
-import 'package:docdoc_app/features/onboarding/widgets/get_started_button.dart';
+import 'package:docdoc_app/features/onboarding/ui/widgets/doc_logo_and_name.dart';
+import 'package:docdoc_app/features/onboarding/ui/widgets/doctor_image_and_text.dart';
+import 'package:docdoc_app/features/onboarding/ui/widgets/get_started_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/theming/styles.dart';
+import '../../../core/theming/styles.dart';
 
 
 class OnBoardingScreen extends StatelessWidget {

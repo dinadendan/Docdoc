@@ -1,8 +1,9 @@
 import 'package:docdoc_app/core/helper/extension.dart';
 import 'package:flutter/material.dart';
-import '../../../core/routing/routes.dart';
-import '../../../core/theming/colors.dart';
-import '../../../core/theming/styles.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/colors.dart';
+import '../../../../core/theming/styles.dart';
+
 
 class GetStartedButton extends StatelessWidget {
   const GetStartedButton({super.key});
