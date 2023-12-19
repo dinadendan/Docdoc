@@ -4,17 +4,16 @@ import '../../core/helper/spacing.dart';
 import '../../core/theming/styles.dart';
 import '../../core/widgets/app_text_button.dart';
 import '../../core/widgets/app_text_form_field.dart';
-import '../login/ui/widgets/already_have_account_text.dart';
 import '../login/ui/widgets/terms_and_conditions_text.dart';
 
-class CreateAccountScreen extends StatefulWidget{
-  const CreateAccountScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget{
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  State<CreateAccountScreen> createState() => _CreateAccountScreenState();
+  State<SignUpScreen> createState() => _CreateAccountScreenState();
 }
 
-class _CreateAccountScreenState extends State<CreateAccountScreen> {
+class _CreateAccountScreenState extends State<SignUpScreen> {
   final formKey = GlobalKey<FormState>();
   bool isObscureText = true;
   @override
@@ -22,7 +21,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.h,vertical: 45.h),
+          padding: EdgeInsets.symmetric(horizontal: 30.h,vertical: 80.h),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,6 +79,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             }
                         },
                       ),
+                      verticalSpace(20),
                       Align(
                         alignment: Alignment.centerRight,
                         child: Text(
@@ -92,10 +92,8 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                         textStyle:TextStyles.font16WhiteSemiBold,
                         onPressed: () {},
                       ),
-                      verticalSpace(16),
+                      verticalSpace(40),
                       const TermsAndConditionsText(),
-                      verticalSpace(60),
-                      const AlreadyHaveAccountText(),
                     ],
                   ),
                 ),

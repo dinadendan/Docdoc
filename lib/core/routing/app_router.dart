@@ -3,6 +3,7 @@ import 'package:docdoc_app/features/home/home_screen.dart';
 import 'package:docdoc_app/features/login/logic/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/create_account/create_account_screen.dart';
 import '../../features/login/ui/login_screen.dart';
 import '../../features/onboarding/ui/onboarding_Screen.dart';
 import '../di/dependency_injection.dart';
@@ -27,10 +28,17 @@ class AppRouter {
           ),
         );
 
+      case Routes.signUp:
+        return MaterialPageRoute(
+          builder: (_) => const SignUpScreen(),
+        );
+
+
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
         );
+
 
 
 
