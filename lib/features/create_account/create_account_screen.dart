@@ -41,9 +41,13 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   key: formKey,
                   child: Column(
                     children: [
-                      const AppTextFormField(
+                      AppTextFormField(
                         hintText: 'Email',
-
+                        validator: (value){
+                          if(value == null || value.isEmpty){
+                            return 'Please enter your Email';
+                          }
+                        },
                       ),
                       verticalSpace(16),
                       AppTextFormField(
@@ -61,10 +65,20 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                 : Icons.visibility,
                           ),
                         ),
+                        validator: (value){
+                          if(value == null || value.isEmpty){
+                            return 'Please enter your password';
+                          }
+                        },
                       ),
                       verticalSpace(24),
-                      const AppTextFormField(
-                          hintText: 'Your number'
+                      AppTextFormField(
+                        hintText: 'Your number',
+                        validator: (value){
+                            if(value == null || value.isEmpty){
+                              return 'Please enter your number';
+                            }
+                        },
                       ),
                       Align(
                         alignment: Alignment.centerRight,
