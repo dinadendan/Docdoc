@@ -1,12 +1,11 @@
 import 'package:docdoc_app/core/helper/extension.dart';
-import 'package:docdoc_app/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/styles.dart';
 
-class AlreadyHaveAccountText extends StatelessWidget {
-  const AlreadyHaveAccountText({super.key});
+class DontHaveAccountText extends StatelessWidget {
+  const DontHaveAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {

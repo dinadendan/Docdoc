@@ -3,9 +3,10 @@ import 'package:docdoc_app/features/home/home_screen.dart';
 import 'package:docdoc_app/features/login/logic/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../features/create_account/create_account_screen.dart';
 import '../../features/login/ui/login_screen.dart';
 import '../../features/onboarding/ui/onboarding_Screen.dart';
+import '../../features/sign_up/logic/sign_up_cubit.dart';
+import '../../features/sign_up/ui/sign_up_screen.dart';
 import '../di/dependency_injection.dart';
 
 
@@ -30,7 +31,10 @@ class AppRouter {
 
       case Routes.signUp:
         return MaterialPageRoute(
-          builder: (_) => const SignUpScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<SignupCubit>(),
+            child: const SignupScreen(),
+          ),
         );
 
 
