@@ -1,11 +1,11 @@
+import 'package:docdoc_app/core/helper/app_regex.dart';
+import 'package:docdoc_app/core/helper/spacing.dart';
+import 'package:docdoc_app/features/sign_up/logic/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/helper/app_regex.dart';
-import '../../../../core/helper/spacing.dart';
 import '../../../../core/widgets/app_text_form_field.dart';
 import '../../../login/ui/widgets/password_validations.dart';
-import '../../logic/sign_up_cubit.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});
@@ -108,8 +108,7 @@ class _SignupFormState extends State<SignupForm> {
           ),
           verticalSpace(18),
           AppTextFormField(
-            controller:
-            context.read<SignupCubit>().passwordConfirmationController,
+            controller: context.read<SignupCubit>().passwordConfirmationController,
             hintText: 'Password Confirmation',
             isObscureText: isPasswordConfirmationObscureText,
             suffixIcon: GestureDetector(
