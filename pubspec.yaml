@@ -59,6 +59,14 @@ dependencies:
   flutter_svg: ^2.0.9
   # for adapting screen and font size.
   flutter_screenutil: ^5.9.0
+  # Flutter library to load and cache network images.
+  cached_network_image: ^3.3.1
+  # reading and writing simple key-value pairs
+  shared_preferences: ^2.2.3
+  # provides API to store data in secure storage.
+  flutter_secure_storage: ^9.2.2
+  # easy way to add shimmer effect
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:
