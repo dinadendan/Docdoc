@@ -1,5 +1,3 @@
-import 'package:docdoc_app/core/helper/extension.dart';
-import 'package:docdoc_app/core/routing/routes.dart';
 import 'package:docdoc_app/features/login/ui/widgets/dont_have_account_text.dart';
 import 'package:docdoc_app/features/login/ui/widgets/email_and_password.dart';
 import 'package:docdoc_app/features/login/ui/widgets/login_bloc_listener.dart';
@@ -49,9 +47,9 @@ class LoginScreen extends StatelessWidget{
                       buttonText: 'Login',
                       textStyle:TextStyles.font16WhiteSemiBold,
                       onPressed: () {
-                        context.pushNamed(Routes.homeScreen);
+                        // context.pushNamed(Routes.homeScreen);
 
-                        // validateThenDoLogin(context);
+                        validateThenDoLogin(context);
                       },
                     ),
                     verticalSpace(16),
