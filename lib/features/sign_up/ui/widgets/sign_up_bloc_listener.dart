@@ -1,4 +1,5 @@
 import 'package:docdoc_app/core/helper/extension.dart';
+import 'package:docdoc_app/core/networking/api_error_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,8 +35,8 @@ class SignupBlocListener extends StatelessWidget {
             context.pop();
             showSuccessDialog(context);
           },
-          signupError: (error) {
-            setupErrorState(context, error);
+          signupError: (apiErrorModel) {
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
@@ -58,7 +59,6 @@ class SignupBlocListener extends StatelessWidget {
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Continue'),
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
@@ -67,6 +67,7 @@ class SignupBlocListener extends StatelessWidget {
               onPressed: () {
                 context.pushNamed(Routes.loginScreen);
               },
+              child: const Text('Continue'),
             ),
           ],
         );
@@ -74,7 +75,7 @@ class SignupBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context,ApiErrorModel apiErrorModel) {
     context.pop();
     showDialog(
       context: context,
@@ -85,7 +86,7 @@ class SignupBlocListener extends StatelessWidget {
           size: 32,
         ),
         content: Text(
-          error,
+          apiErrorModel.getAllErrorMessages(),
           style: TextStyles.font15DarkBlueMedium,
         ),
         actions: [
